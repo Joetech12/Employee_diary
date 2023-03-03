@@ -20,7 +20,6 @@ export default function Home() {
   };
 
   const deletehandler = async () => {
-    
     if (deleteId) {
       await deleteUser(deleteId);
       await queryclient.prefetchQuery('users', getUsers);

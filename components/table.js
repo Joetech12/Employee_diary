@@ -6,6 +6,7 @@ import {
   toggleChangeAction,
   updateAction,
   deleteAction,
+  toggleAndUpdateAction,
 } from '../redux/reducer';
 import data from '../database/data.json';
 
