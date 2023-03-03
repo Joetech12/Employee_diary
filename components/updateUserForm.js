@@ -20,7 +20,7 @@ export default function UpdateUserForm({ formId, formData, setFormData }) {
   if (isLoading) return <div>Loading...!</div>;
   if (isError) return <div>Error</div>;
 
-  const { name, avatar, salary, date, email, status } = data;
+  const { name, avatar, salary, birthday, date, email, status } = data;
   const [firstname, lastname] = name ? name.split(' ') : formData;
 
   const handleSubmit = async (e) => {
@@ -72,6 +72,16 @@ export default function UpdateUserForm({ formId, formData, setFormData }) {
           name="salary"
           className="border w-full px-5 py-3 focus:outline-none rounded-md"
           placeholder="Salary"
+        />
+      </div>
+      <div className="input-type">
+        <input
+          type="text"
+          onChange={setFormData}
+          defaultValue={avatar}
+          name="avatar"
+          className="border w-full px-5 py-3 focus:outline-none rounded-md"
+          placeholder="Image url"
         />
       </div>
       <div className="input-type">

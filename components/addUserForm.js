@@ -17,13 +17,11 @@ export default function AddUserForm({ formData, setFormData }) {
     e.preventDefault();
     if (Object.keys(formData).length == 0)
       return console.log("Don't have Form Data");
-    let { firstname, lastname, email, salary, date, status } = formData;
+    let { firstname, lastname, email, salary, avatar, date, status } = formData;
 
     const model = {
       name: `${firstname} ${lastname}`,
-      avatar: `https://randomuser.me/api/portraits/men/${Math.floor(
-        Math.random() * 10
-      )}.jpg`,
+      avatar,
       email,
       salary,
       date,
@@ -75,6 +73,15 @@ export default function AddUserForm({ formData, setFormData }) {
           name="salary"
           className="border w-full px-5 py-3 focus:outline-none rounded-md"
           placeholder="Salary"
+        />
+      </div>
+      <div className="input-type">
+        <input
+          type="text"
+          onChange={setFormData}
+          name="avatar"
+          className="border w-full px-5 py-3 focus:outline-none rounded-md"
+          placeholder="Image url"
         />
       </div>
       <div className="input-type">
