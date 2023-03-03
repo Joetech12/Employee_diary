@@ -27,7 +27,7 @@ export default function AddUserForm({ formData, setFormData }) {
       email,
       salary,
       date,
-      status: status ?? 'Active',
+      status: status,
     };
 
     addMutation.mutate(model);

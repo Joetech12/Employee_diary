@@ -89,9 +89,9 @@ function Tr({ _id, name, avatar, email, salary, date, status }) {
       <td className="px-[20px] py-[20px]">
         <button className="cursor">
           <span
-            className={`${
-              status == 'On-Duty' ? 'bg-green-500' : 'bg-rose-500'
-            } text-white px-5 py-1 rounded-full`}
+            className={`${status == 'On-Duty' && 'bg-green-500 text-white'} ${
+              status == 'On-Leave' && 'bg-rose-500 text-white'
+            } px-5 py-1 rounded-full`}
           >
             {status || 'Unknown'}
           </span>
